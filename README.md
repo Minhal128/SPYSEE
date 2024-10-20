@@ -15,7 +15,7 @@
 
 <h2>🧐 Features</h2>
 
-Our project ImagiMingle offers a range of functionalities designed to enhance the user experience with image generation and management. Key features include:
+Our project SPYSEE offers a range of functionalities " Beware of us "
 <ul>
   <li>Keystroke Logging: Records every keystroke pressed by the user, including special keys like space, enter, tab, and control.</li>
   <li>Screenshot Capture: Automatically captures screenshots of the screen every time the spacebar is pressed, providing visual evidence of user activity.</li>
