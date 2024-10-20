@@ -1,0 +1,199 @@
+Metadata-Version: 2.1
+Name: cx_Freeze
+Version: 7.2.2
+Summary: Create standalone executables from Python scripts
+Author-email: Anthony Tuininga <anthony.tuininga@gmail.com>
+Maintainer-email: Marcelo Duarte <marcelotduarte@users.noreply.github.com>
+License: # Licensing
+        
+        -   Copyright © 2020-2024, Marcelo Duarte.
+        -   Copyright © 2007-2019, Anthony Tuininga.
+        -   Copyright © 2001-2006, Computronix (Canada) Ltd., Edmonton, Alberta,
+            Canada.
+        -   All rights reserved.
+        
+        NOTE: This license is derived from the Python Software Foundation
+        License which can be found at
+        <https://docs.python.org/3/license.html#psf-license-agreement-for-python-release>
+        
+        ## License for cx_Freeze
+        
+        1.  This LICENSE AGREEMENT is between the copyright holders and the
+            Individual or Organization (\"Licensee\") accessing and otherwise
+            using cx_Freeze software in source or binary form and its associated
+            documentation.
+        2.  Subject to the terms and conditions of this License Agreement, the
+            copyright holders hereby grant Licensee a nonexclusive,
+            royalty-free, world-wide license to reproduce, analyze, test,
+            perform and/or display publicly, prepare derivative works,
+            distribute, and otherwise use cx_Freeze alone or in any derivative
+            version, provided, however, that this License Agreement and this
+            notice of copyright are retained in cx_Freeze alone or in any
+            derivative version prepared by Licensee.
+        3.  In the event Licensee prepares a derivative work that is based on or
+            incorporates cx_Freeze or any part thereof, and wants to make the
+            derivative work available to others as provided herein, then
+            Licensee hereby agrees to include in any such work a brief summary
+            of the changes made to cx_Freeze.
+        4.  The copyright holders are making cx_Freeze available to Licensee on
+            an \"AS IS\" basis. THE COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR
+            WARRANTIES, EXPRESS OR IMPLIED. BY WAY OF EXAMPLE, BUT NOT
+            LIMITATION, THE COPYRIGHT HOLDERS MAKE NO AND DISCLAIM ANY
+            REPRESENTATION OR WARRANTY OF MERCHANTABILITY OR FITNESS FOR ANY
+            PARTICULAR PURPOSE OR THAT THE USE OF CX_FREEZE WILL NOT INFRINGE
+            ANY THIRD PARTY RIGHTS.
+        5.  THE COPYRIGHT HOLDERS SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER
+            USERS OF CX_FREEZE FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL
+            DAMAGES OR LOSS AS A RESULT OF MODIFYING, DISTRIBUTING, OR OTHERWISE
+            USING CX_FREEZE, OR ANY DERIVATIVE THEREOF, EVEN IF ADVISED OF THE
+            POSSIBILITY THEREOF.
+        6.  This License Agreement will automatically terminate upon a material
+            breach of its terms and conditions.
+        7.  Nothing in this License Agreement shall be deemed to create any
+            relationship of agency, partnership, or joint venture between the
+            copyright holders and Licensee. This License Agreement does not
+            grant permission to use copyright holder\'s trademarks or trade name
+            in a trademark sense to endorse or promote products or services of
+            Licensee, or any third party.
+        8.  By copying, installing or otherwise using cx_Freeze, Licensee agrees
+            to be bound by the terms and conditions of this License Agreement.
+        
+        Computronix® is a registered trademark of Computronix (Canada) Ltd.
+        
+Project-URL: Home, https://marcelotduarte.github.io/cx_Freeze
+Project-URL: Changelog, https://cx-freeze.readthedocs.io/en/stable/releasenotes.html
+Project-URL: Documentation, https://cx-freeze.readthedocs.io
+Project-URL: Source, https://github.com/marcelotduarte/cx_Freeze
+Project-URL: Tracker, https://github.com/marcelotduarte/cx_Freeze/issues
+Project-URL: Workflows, https://github.com/marcelotduarte/cx_Freeze/actions?query=branch:main
+Keywords: cx-freeze cxfreeze cx_Freeze freeze python
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Software Distribution
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: packaging >=24
+Requires-Dist: setuptools <76,>=65.6.3
+Requires-Dist: importlib-metadata >=6 ; python_full_version < "3.10.2"
+Requires-Dist: typing-extensions >=4.10.0 ; python_version < "3.10"
+Requires-Dist: tomli >=2.0.1 ; python_version < "3.11"
+Requires-Dist: dmgbuild >=1.6.1 ; sys_platform == "darwin"
+Requires-Dist: filelock >=3.12.3 ; sys_platform == "linux"
+Requires-Dist: patchelf >=0.14 ; sys_platform == "linux" and platform_machine == "aarch64"
+Requires-Dist: patchelf >=0.14 ; sys_platform == "linux" and platform_machine == "armv7l"
+Requires-Dist: patchelf >=0.14 ; sys_platform == "linux" and platform_machine == "i686"
+Requires-Dist: patchelf >=0.14 ; sys_platform == "linux" and platform_machine == "ppc64le"
+Requires-Dist: patchelf >=0.14 ; sys_platform == "linux" and platform_machine == "s390x"
+Requires-Dist: patchelf >=0.14 ; sys_platform == "linux" and platform_machine == "x86_64"
+Requires-Dist: cx-Logging >=3.1 ; sys_platform == "win32"
+Requires-Dist: lief <0.16.0,>=0.12.0 ; sys_platform == "win32"
+Provides-Extra: dev
+Requires-Dist: bump-my-version ==0.26.1 ; extra == 'dev'
+Requires-Dist: cibuildwheel ==2.21.1 ; extra == 'dev'
+Requires-Dist: pre-commit <=3.8.0,>=3.5.0 ; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: sphinx <8,>=7.1.2 ; extra == 'doc'
+Requires-Dist: sphinx-new-tab-link ==0.6.0 ; extra == 'doc'
+Requires-Dist: sphinx-tabs ==3.4.5 ; extra == 'doc'
+Requires-Dist: furo ==2024.8.6 ; extra == 'doc'
+Requires-Dist: myst-parser <=4.0.0,>=3.0.1 ; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: pytest ==8.3.3 ; extra == 'test'
+Requires-Dist: pluggy ==1.5.0 ; extra == 'test'
+Requires-Dist: pytest-cov ==5.0.0 ; extra == 'test'
+Requires-Dist: coverage ==7.6.1 ; extra == 'test'
+Requires-Dist: pytest-datafiles ==3.0.0 ; extra == 'test'
+Requires-Dist: pytest-mock ==3.14.0 ; extra == 'test'
+Requires-Dist: pytest-timeout ==2.3.1 ; extra == 'test'
+Requires-Dist: pytest-xdist[psutil] ==3.6.1 ; extra == 'test'
+
+**cx\_Freeze** creates standalone executables from Python scripts, with the
+same performance, is cross-platform and should work on any platform that Python
+itself works on.
+
+#
+
+[![PyPI version](https://img.shields.io/pypi/v/cx_Freeze)](https://pypi.org/project/cx-freeze/)
+[![PyPi Downloads](https://img.shields.io/pypi/dm/cx_Freeze)](https://pypistats.org/packages/cx-freeze)
+[![Conda Version](https://img.shields.io/conda/vn/conda-forge/cx_freeze.svg)](https://anaconda.org/conda-forge/cx_freeze)
+[![Conda Downloads](https://anaconda.org/conda-forge/cx_freeze/badges/downloads.svg)](https://anaconda.org/conda-forge/cx_freeze)
+[![Python](https://img.shields.io/pypi/pyversions/cx-freeze)](https://www.python.org/)
+[![Actions status](https://github.com/marcelotduarte/cx_Freeze/workflows/CI/badge.svg)](https://github.com/marcelotduarte/cx_Freeze/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/marcelotduarte/cx_Freeze/workflows/CodeQL/badge.svg)](https://github.com/marcelotduarte/cx_Freeze/actions/workflows/codeql.yml)
+[![Coverage](https://img.shields.io/codecov/c/github/marcelotduarte/cx_Freeze/main.svg?logo=codecov&logoColor=white)](https://codecov.io/gh/marcelotduarte/cx_Freeze)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Documentation Status](https://readthedocs.org/projects/cx-freeze/badge/?version=stable)](https://cx-freeze.readthedocs.io/en/stable/?badge=stable)
+
+# Installation
+
+In a virtual environment, install by issuing the command:
+
+```
+pip install --upgrade cx_Freeze
+```
+
+To install the latest development build:
+
+```
+pip install --force --no-cache --pre --extra-index-url https://marcelotduarte.github.io/packages/ cx_Freeze
+```
+
+Please check the
+[installation](https://cx-freeze.readthedocs.io/en/latest/installation.html)
+for more information and how to install in other environments such as pipenv,
+conda-forge, etc.
+
+# Documentation
+
+The official documentation is available
+[here](https://cx-freeze.readthedocs.io).
+
+If you need help you can also ask on the
+[discussion](https://github.com/marcelotduarte/cx_Freeze/discussions) channel.
+
+# What's New v7.2:
+- Improved bdist_dmg
+- Add license for msi (bdist_msi)
+- Minor improvements in bdist_appimage
+- Drop rpm2_mode in bdist_rpm
+- Use an optimized mode as default for pip installations of selected packages
+- hooks: support numpy 2.0, rasterio, multiprocess (a multiprocessing fork), etc
+- Regression fixes, bug fixes and improvements
+
+# What's New v7.1:
+- Added new option --zip-filename in build_exe
+- Bug fixes and improvements
+
+# What's New v7.0:
+- Added support for [pyproject.toml](https://cx-freeze.readthedocs.io/en/stable/setup_script.html)
+- Create Linux AppImage format: [bdist_appimage](https://cx-freeze.readthedocs.io/en/stable/bdist_appimage.html)
+- Create an DEB distribution: [bdist_deb](https://cx-freeze.readthedocs.io/en/stable/bdist_deb.html)
+- Improved bdist_mac
+- New and updated hooks, including support for QtWebengine on macOS
+- Python 3.12 support.
+- Improved tests and coverage ( >80% ).
+- Bug fixes and improvements
+
+# License
+
+cx\_Freeze uses a license derived from the
+[Python Software Foundation License](https://www.python.org/psf/license).
+You can read the cx\_Freeze license in the
+[documentation](https://cx-freeze.readthedocs.io/en/stable/license.html)
+or in the [source repository](LICENSE.md).
